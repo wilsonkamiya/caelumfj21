@@ -7,12 +7,20 @@
 <html>
 <body>
 <table>
+		<tr bgcolor="gray" >
+			<td >Codigo </td>
+			<td >Nome</td>	
+			<td>Email</td>
+			<td>Endereco</td>
+			<td>DataNascimento</td>
+		</tr>
 	  <%
-		ContatoDao	dao	=	new	ContatoDao();
-		List<Contato>	contatos	=	dao.getLista();
-		for	(Contato	contato	:	contatos )	{
+		ContatoDao dao = new ContatoDao();
+		List<Contato> contatos = dao.getLista();
+		for	(Contato contato : contatos ) {
 		%>
 			<tr>
+				<td><%=contato.getId()	%></td>	
 				<td><%=contato.getNome()	%></td>	
 				<td><%=contato.getEmail()	%></td>
 				<td><%=contato.getEndereco()	%></td>
