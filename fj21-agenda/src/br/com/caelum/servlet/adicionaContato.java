@@ -1,11 +1,11 @@
 package br.com.caelum.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -63,6 +63,7 @@ public class adicionaContato extends HttpServlet {
 			e.printStackTrace();
 		}
     	
+    	/* desabilitado pelo exercicio atual.
     	PrintWriter out = response.getWriter();
     	out.println("<html>");
     	out.println("<body>");
@@ -70,7 +71,10 @@ public class adicionaContato extends HttpServlet {
     	out.println("Contato " + ct.getNome() + " adicionado com sucesso!");
     	out.println("</h1>");
     	out.println("</body>");
-    	out.println("</html>");
+    	out.println("</html>"); */ 
+		
+		RequestDispatcher rd = request.getRequestDispatcher("/contatoAdicionado.jsp");
+        rd.forward(request,response);
 	}
 
 }

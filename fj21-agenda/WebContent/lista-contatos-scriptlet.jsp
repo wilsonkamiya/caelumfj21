@@ -5,10 +5,13 @@
 	br.com.caelum.jdbc.modelo.*" %>    
 <!DOCTYPE html>
 <html>
+<head>
+	<title>Lista De Contatos</title>
+</head>
 <body>
 <table>
 		<tr bgcolor="gray">
-			<td >Codigo </td>
+			<td >Codigo </td>	
 			<td >Nome</td>	
 			<td>Email</td>
 			<td>Endereco</td>
