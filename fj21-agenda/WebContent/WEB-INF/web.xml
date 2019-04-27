@@ -11,15 +11,15 @@
     <welcome-file>bemvindo.jsp</welcome-file>
   </welcome-file-list>
   <error-page>
-  	<exception-type>Java.Lang.Exception</exception-type>
-  	<location>/Erro.html</location>
+    <exception-type>Java.Lang.Exception</exception-type>
+    <location>/Erro.html</location>
   </error-page>
   <error-page>
-  	<error-code>404</error-code>
-  	<location>/404.html</location>
+    <error-code>404</error-code>
+    <location>/404.html</location>
   </error-page>
-    <error-page>
-  	<error-code>500</error-code>
-  	<location>/moio.html</location>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/moio.html</location>
   </error-page>
 </web-app>
