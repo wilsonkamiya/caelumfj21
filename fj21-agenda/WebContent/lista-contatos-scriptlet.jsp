@@ -7,7 +7,7 @@
 <html>
 <body>
 <table>
-		<tr bgcolor="gray" >
+		<tr bgcolor="gray">
 			<td >Codigo </td>
 			<td >Nome</td>	
 			<td>Email</td>
