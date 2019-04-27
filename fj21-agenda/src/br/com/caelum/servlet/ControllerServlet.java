@@ -30,14 +30,13 @@ public class ControllerServlet extends HttpServlet {
 			String	parametro	=	request.getParameter("logica");
 			String	nomeDaClasse	=	"br.com.caelum.mvc.logica."	+	parametro;
 			try	{
-						Class	classe	=	Class.forName(nomeDaClasse);
-						@SuppressWarnings("deprecation")
-						Logica	logica	=	(Logica)	classe.newInstance();
-						String	pagina	=	logica.executa(request,	response);
-						request.getRequestDispatcher(pagina).forward(request,	response);
-			}	catch	(Exception	e)	{
-						throw new	ServletException(
-										"A	lógica	de	negócios	causou	uma	exceção",	e);
+					Class	classe	=	Class.forName(nomeDaClasse);
+					@SuppressWarnings("deprecation")
+					Logica	logica	=	(Logica)	classe.newInstance();
+					String	pagina	=	logica.executa(request,	response);
+					request.getRequestDispatcher(pagina).forward(request,	response);
+			}	catch (Exception e)	{
+					throw new ServletException("A lógica de negócios causou uma exceção", e);
 			}
 }
 
