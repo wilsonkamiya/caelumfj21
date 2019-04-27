@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<img src="WEB-INF/img/caelum-ensino-inovacao.png"  > 
+	<img src="	img/caelum-ensino-inovacao.png"  > 
 	<h2>Agenda de contatos do: Xpto</h2>
 	<hr/>
 </body>
