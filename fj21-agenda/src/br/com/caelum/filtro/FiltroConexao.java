@@ -19,13 +19,14 @@ public class FiltroConexao implements Filter {
 	public void doFilter(ServletRequest request,
 			ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
+		
 				try {
-				Connection connection = new ConnectionFactory()
-				.getConnection();
-				// pendurando a connection na requisição
-				request.setAttribute("conexao", connection);
-				chain.doFilter(request, response);
-				connection.close();
+					Connection connection = new ConnectionFactory()
+					.getConnection();
+					// pendurando a connection na requisição
+					request.setAttribute("conexao", connection);
+					chain.doFilter(request, response);
+					connection.close();
 				} catch (SQLException | ClassNotFoundException e) {
 					throw new ServletException(e);
 				}
