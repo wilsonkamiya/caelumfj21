@@ -19,6 +19,10 @@ public class ContatoDao {
 			this.connection = new ConnectionFactory().getConnection();
 	}
 	
+	public ContatoDao(Connection connection) {
+		this.connection = connection;
+	}
+	
 	public void remover(Contato contato) {
 
 		String sql = "delete from contatos " +
